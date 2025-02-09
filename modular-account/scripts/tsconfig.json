@@ -1,0 +1,27 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "target": "ES2020",
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "outDir": "./dist",
+        "rootDir": "..", // Changed from "." to ".." to include parent directory
+        "paths": {
+            "@/*": [
+                "../../../*"
+            ]
+        },
+        "baseUrl": ".",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "resolveJsonModule": true
+    },
+    "include": [
+        "./**/*",
+        "../plugins/**/*" // Added to include the plugins directory
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
