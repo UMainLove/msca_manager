@@ -7,3 +7,6 @@
 [submodule "contracts/lib/openzeppelin-contracts"]
 	path = contracts/lib/openzeppelin-contracts
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "contracts/REPO_erc6900_smart_contracts_lib"]
+	path = contracts/REPO_erc6900_smart_contracts_lib
+	url = https://github.com/alchemyplatform/modular-account.git
