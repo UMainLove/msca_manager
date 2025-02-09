@@ -1,4 +1,5 @@
 "use client";
+
 import { config, queryClient } from "@/config";
 import { AlchemyClientState } from "@account-kit/core";
 import { AlchemyAccountProvider } from "@account-kit/react";
@@ -10,6 +11,7 @@ export const Providers = (
 ) => {
   return (
     <QueryClientProvider client={queryClient}>
+      <Suspense fallback={<div>Loading...</div>}>
       <AlchemyAccountProvider
         config={config}
         queryClient={queryClient}
@@ -17,6 +19,7 @@ export const Providers = (
       >
         {props.children}
       </AlchemyAccountProvider>
+      </Suspense>
     </QueryClientProvider>
   );
 };

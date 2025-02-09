@@ -7,27 +7,71 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rm -rf node_modules .next",
+    "create:client": "tsx modular-account/src/ModularAccount.ts",
+    "getAccountAddress": "tsx modular-account/scripts/getCounterfactual.ts",
+    "sendFundsFromEOA": "tsx modular-account/scripts/send_eth_to_msca.ts",
+    "generate:plugins": "npx @account-kit/plugingen generate -c modular-account/plugins/plugingen.config.ts",
+    "_lint:generated": "eslint ./modular-account/plugins --fix && prettier --write ./modular-account/plugins",
+    "install-plugin": "tsx modular-account/scripts/installPlugin.ts"
+  },
+  "overrides": {
+    "viem": "2.20.0",
+    "@alchemy/aa-accounts": {
+      "viem": "2.20.0"
+    },
+    "@alchemy/aa-alchemy": {
+      "viem": "2.20.0"
+    },
+    "@alchemy/aa-ethers": {
+      "viem": "2.20.0"
+    },
+    "@safe-global/safe-apps-sdk": {
+      "viem": "2.20.0"
+    },
+    "mipd": {
+      "viem": "2.20.0"
+    }
   },
   "dependencies": {
     "@account-kit/core": "^4.0.0",
     "@account-kit/infra": "^4.0.0",
     "@account-kit/react": "^4.0.0",
-    "@tanstack/react-query": "^5.50.1",
+    "@alchemy/aa-accounts": "^3.19.0",
+    "@alchemy/aa-alchemy": "^3.19.0",
+    "@alchemy/aa-ethers": "^3.19.0",
+    "@openzeppelin/contracts": "^5.1.0",
+    "@tanstack/react-query": "^5.62.2",
+    "alchemy-sdk": "^3.5.0",
+    "dedent": "^1.5.3",
+    "encoding": "^0.1.13",
+    "ethers": "^6.13.4",
+    "fs": "^0.0.1-security",
     "next": "14.2.4",
+    "path": "^0.12.7",
+    "pino-pretty": "^13.0.0",
     "react": "^18",
     "react-dom": "^18",
     "viem": "2.20.0",
-    "wagmi": "2.12.7"
+    "wagmi": "2.12.7",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@account-kit/plugingen": "^4.5.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@wagmi/cli": "^2.1.22",
+    "change-case": "^5.4.4",
+    "dotenv": "^16.4.7",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.4",
     "postcss": "^8",
     "tailwindcss": "^3.4.4",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.19.2",
     "typescript": "^5"
   }
 }
