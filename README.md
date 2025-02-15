@@ -25,7 +25,7 @@ npx create-next-app@latest account-kit-app -e https://github.com/UMainLove/msca_
 #### Get your Alchemy api key, Gas Sponsorship key (Paymaster Policy ID), ReOwn Project ID (Ex WalletConnect) and Metamask private key
 
 - Create a new embedded accounts configuration for an alchemy app in your [dashboard](https://dashboard.alchemy.com/accounts)
-- Create a new Gas Plicy configuration for an alchemy app in your [dashboard](https://dashboard.alchemy.com/gas-manager)
+- Create a new Gas Policy configuration for an alchemy app in your [dashboard](https://dashboard.alchemy.com/gas-manager)
 - Create a new ReOwn Project configuration to use you Blockchain APIs in your [dashboard](https://cloud.reown.com/app/)
 
 ##
